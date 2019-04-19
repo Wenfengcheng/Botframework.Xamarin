@@ -15,7 +15,7 @@ namespace Microsoft.Botframework.Xamarin.Implementations
     public class BotService : IBotService
     {
         private DirectLineClient _client;
-        private string _directLineSecret = ""; // your secret here
+        private string _directLineSecret = "cJhB3FyjSbc.cwA.QVw.ZStKZuGpPUvy6I6pFwuStdWJmFcIO7az6M0iah5_S3k"; // your secret here
         private Conversation _defaultConversation;
         private string _watermark;
 

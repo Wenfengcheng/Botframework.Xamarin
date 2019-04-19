@@ -17,8 +17,7 @@
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
-    <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
     <AndroidStoreUncompressedFileExtensions />
     <MandroidI18n />
     <JavaMaximumHeapSize />
@@ -49,11 +48,11 @@
     <AndroidLinkMode>SdkOnly</AndroidLinkMode>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AdaptiveCards">
-      <HintPath>..\..\libs\AdaptiveCards\netstandard1.3\AdaptiveCards.dll</HintPath>
+    <Reference Include="AdaptiveCards, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\AdaptiveCards.1.1.2\lib\netstandard2.0\AdaptiveCards.dll</HintPath>
     </Reference>
-    <Reference Include="AdaptiveCards.Xaml.XamarinForms">
-      <HintPath>..\..\libs\AdaptiveCards\netstandard1.3\AdaptiveCards.Xaml.XamarinForms.dll</HintPath>
+    <Reference Include="AdaptiveCards.Xamarin.Forms">
+      <HintPath>..\..\libs\AdaptiveCards\netstandard1.3\AdaptiveCards.Xamarin.Forms.dll</HintPath>
     </Reference>
     <Reference Include="FormsViewGroup, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Forms.2.4.0.282\lib\MonoAndroid10\FormsViewGroup.dll</HintPath>

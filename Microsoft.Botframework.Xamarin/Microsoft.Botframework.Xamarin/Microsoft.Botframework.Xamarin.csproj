@@ -4,6 +4,7 @@
     <PackageTargetFallback>$(PackageTargetFallback);portable-win+net45+wp8+win81+wpa8</PackageTargetFallback>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="AdaptiveCards" Version="1.1.2" />
     <PackageReference Include="FreshMvvm">
       <Version>2.2.0</Version>
     </PackageReference>
@@ -27,11 +28,8 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="AdaptiveCards">
-      <HintPath>..\..\libs\AdaptiveCards\netstandard1.3\AdaptiveCards.dll</HintPath>
-    </Reference>
-    <Reference Include="AdaptiveCards.Xaml.XamarinForms">
-      <HintPath>..\..\..\ato_workspace\Code\App\libs\AdaptiveCards\netstandard1.3\AdaptiveCards.Xaml.XamarinForms.dll</HintPath>
+    <Reference Include="AdaptiveCards.Xamarin.Forms">
+      <HintPath>..\..\libs\AdaptiveCards\netstandard1.3\AdaptiveCards.Xamarin.Forms.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

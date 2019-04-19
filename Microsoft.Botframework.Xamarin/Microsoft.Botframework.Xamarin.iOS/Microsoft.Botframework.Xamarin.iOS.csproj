@@ -123,13 +123,11 @@
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="AdaptiveCards, Version=0.5.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\libs\AdaptiveCards\netstandard1.3\AdaptiveCards.dll</HintPath>
+    <Reference Include="AdaptiveCards, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\AdaptiveCards.1.1.2\lib\netstandard2.0\AdaptiveCards.dll</HintPath>
     </Reference>
-    <Reference Include="AdaptiveCards.Xaml.XamarinForms, Version=0.5.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\libs\AdaptiveCards\netstandard1.3\AdaptiveCards.Xaml.XamarinForms.dll</HintPath>
+    <Reference Include="AdaptiveCards.Xamarin.Forms">
+      <HintPath>..\..\libs\AdaptiveCards\netstandard1.3\AdaptiveCards.Xamarin.Forms.dll</HintPath>
     </Reference>
     <Reference Include="FreshIOC, Version=1.0.6071.17008, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\FreshMvvm.2.2.0\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\FreshIOC.dll</HintPath>

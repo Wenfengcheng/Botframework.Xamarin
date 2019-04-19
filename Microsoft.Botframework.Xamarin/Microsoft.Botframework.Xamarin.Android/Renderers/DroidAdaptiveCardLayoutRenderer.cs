@@ -59,6 +59,7 @@ namespace Microsoft.Botframework.Xamarin.Droid.Renderers
                                     xaml.OnAction += (s, args) => e.NewElement.InvokeOnAction(s, args);
 
                                     xaml.View.WidthRequest = 350;
+                                    xaml.View.HeightRequest = 500;
                                     xaml.View.Margin = new Thickness(8);
                                     xaml.View.BackgroundColor = Color.LightGray;
 
