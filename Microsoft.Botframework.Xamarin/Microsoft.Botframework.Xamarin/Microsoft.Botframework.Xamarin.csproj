@@ -23,6 +23,7 @@
     <PackageReference Include="Xam.Forms.MarkdownView">
       <Version>0.5.3-pre</Version>
     </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.5.909-pre" />
     <PackageReference Include="Xamarin.Forms">
       <Version>2.4.0.282</Version>
     </PackageReference>
