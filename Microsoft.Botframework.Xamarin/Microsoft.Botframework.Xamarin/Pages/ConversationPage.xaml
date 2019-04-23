@@ -41,9 +41,7 @@
                 </ViewCell>
             </DataTemplate>
             <DataTemplate x:Key="adaptiveCardsTemplate">
-                <ViewCell>
-                    <customViews:AdaptiveCardLayout />
-                </ViewCell>
+                <customViews:AdaptiveViewCell />
             </DataTemplate>
             <DataTemplate x:Key="sentPhotoAttachmentTemplate">
                 <ViewCell>
@@ -74,6 +72,17 @@
                 <RowDefinition Height="*" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
+            <!--<ScrollView>
+                <StackLayout BindableLayout.ItemsSource="{Binding Messages}">
+                    <BindableLayout.ItemTemplateSelector>
+                        <dataTemplates:ActivityDataTemplateSelector 
+                                    SenderTemplate="{StaticResource senderActivityTemplate}"
+                                    ReceiverTemplate="{StaticResource receiverActivityTemplate}"
+                                    AdaptiveCardsTemplate="{StaticResource adaptiveCardsTemplate}"
+                                    SentPhotoAttachmentTemplate="{StaticResource sentPhotoAttachmentTemplate}" />
+                    </BindableLayout.ItemTemplateSelector>
+                </StackLayout>
+            </ScrollView>-->
             <customViews:ChatListView x:Name="ChatListView"
                       ItemsSource="{Binding Messages}"
                       ItemTemplate="{StaticResource activityDataTemplateSelector}"

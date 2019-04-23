@@ -23,6 +23,7 @@ namespace Microsoft.Botframework.Xamarin.Droid
             SetupIoc();
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+            FFImageLoading.Forms.Platform.CachedImageRenderer.Init(false);
             LoadApplication(new App());
         }
 

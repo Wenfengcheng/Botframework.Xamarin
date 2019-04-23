@@ -59,8 +59,10 @@ namespace Microsoft.Botframework.Xamarin.ViewModels
 
         private void ActivitySent(object sender, ActivityEventArgs e)
         {
-            PreviousSentActivity = e.Activity;
-            Messages.Add(PreviousSentActivity);
+            Device.BeginInvokeOnMainThread(()=> {
+                PreviousSentActivity = e.Activity;
+                Messages.Add(PreviousSentActivity);
+            });
         }
 
         private void ActivityReceived(object sender, ActivityEventArgs e)

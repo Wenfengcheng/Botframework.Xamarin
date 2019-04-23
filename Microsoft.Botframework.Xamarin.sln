@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27009.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Botframework.Xamarin.Android", "Microsoft.Botframework.Xamarin\Microsoft.Botframework.Xamarin.Android\Microsoft.Botframework.Xamarin.Android.csproj", "{DFFE6617-841C-4B3E-9C0F-1FB557FDE1E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Botframework.Xamarin", "Microsoft.Botframework.Xamarin\Microsoft.Botframework.Xamarin\Microsoft.Botframework.Xamarin.csproj", "{F4C836C7-AD64-4EF3-AE41-BC67928EC811}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Botframework.Xamarin", "Microsoft.Botframework.Xamarin\Microsoft.Botframework.Xamarin\Microsoft.Botframework.Xamarin.csproj", "{F4C836C7-AD64-4EF3-AE41-BC67928EC811}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Botframework.Xamarin.UWP", "Microsoft.Botframework.Xamarin\Microsoft.Botframework.Xamarin.UWP\Microsoft.Botframework.Xamarin.UWP.csproj", "{DA2B840E-5096-4C8F-AE59-1CBC4C5C31F7}"
 EndProject

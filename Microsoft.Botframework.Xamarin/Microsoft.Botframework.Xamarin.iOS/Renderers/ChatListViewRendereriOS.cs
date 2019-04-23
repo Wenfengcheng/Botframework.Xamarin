@@ -25,7 +25,7 @@ namespace Microsoft.Botframework.Xamarin.iOS.Renderers
                     _observableCollection.CollectionChanged -= CollectionChanged;
                 }
 
-                MessagingCenter.Unsubscribe<AdaptiveCardLayoutRendereriOS>(this, "ReloadUITableViewData");
+                MessagingCenter.Unsubscribe<AdaptiveViewCell>(this, "ReloadUITableViewData");
             }
 
             if (e.NewElement != null)
@@ -40,7 +40,7 @@ namespace Microsoft.Botframework.Xamarin.iOS.Renderers
                     }
                 }
 
-                MessagingCenter.Subscribe<AdaptiveCardLayoutRendereriOS>(this, "ReloadUITableViewData", (sender) => {
+                MessagingCenter.Subscribe<AdaptiveViewCell>(this, "ReloadUITableViewData", (sender) => {
 
                     Device.BeginInvokeOnMainThread(() =>
                     {

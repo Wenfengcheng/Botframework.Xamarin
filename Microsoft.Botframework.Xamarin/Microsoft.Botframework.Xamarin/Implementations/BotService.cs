@@ -27,7 +27,8 @@ namespace Microsoft.Botframework.Xamarin.Implementations
             if (string.IsNullOrEmpty(this._directLineSecret)) throw new ArgumentNullException("Direct Line Secret is required");
 
             _client = new DirectLineClient(_directLineSecret);
-            MessagingCenter.Subscribe<AdaptiveCardLayout, ActionEventArgs>(this, "AdaptiveCardAction", _handleAdaptiveCardAction);
+            MessagingCenter.Unsubscribe<AdaptiveViewCell>(this, "AdaptiveCardAction");
+            MessagingCenter.Subscribe<AdaptiveViewCell, ActionEventArgs>(this, "AdaptiveCardAction", _handleAdaptiveCardAction);
 
         }
 
@@ -95,7 +96,7 @@ namespace Microsoft.Botframework.Xamarin.Implementations
             return "DevTestUser";
         }
 
-        private void _handleAdaptiveCardAction(AdaptiveCardLayout card, ActionEventArgs args)
+        private void _handleAdaptiveCardAction(AdaptiveViewCell card, ActionEventArgs args)
         {
             Task.Factory.StartNew(async () =>
             {
@@ -104,18 +105,25 @@ namespace Microsoft.Botframework.Xamarin.Implementations
                     try
                     {
                         // {{"action": "PAY NOW","dialogName": "DebtDialog","cardName": "PaymentOptions"}}
-                        var data = args.Data as JObject;
-                        var action = data["action"].Value<string>();
-
-                        if (action != null)
+                        if(args.Action is AdaptiveCards.AdaptiveOpenUrlAction openUrlAction)
                         {
-                            await this.SendMessage(action);
+                            Console.WriteLine(openUrlAction.UrlString);
+                            await this.SendMessage(openUrlAction.UrlString);
                         }
-                        else
+                        else if(args.Action is AdaptiveCards.AdaptiveSubmitAction submitAction)
                         {
-                            await this.SendMessage(args.Action.Title);
-                        }
+                            var data = args.Data as JObject;
+                            var action = data["action"].Value<string>();
 
+                            if (action != null)
+                            {
+                                await this.SendMessage(action);
+                            }
+                            else
+                            {
+                                await this.SendMessage(args.Action.Title);
+                            }
+                        }
                     }
                     catch (Exception ex)
                     {

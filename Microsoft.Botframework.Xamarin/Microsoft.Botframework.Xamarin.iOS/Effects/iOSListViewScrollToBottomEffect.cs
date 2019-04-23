@@ -7,6 +7,7 @@ using System.Text;
 
 using Foundation;
 using Microsoft.Bot.Connector.DirectLine;
+using Microsoft.Botframework.Xamarin.CustomViews;
 using Microsoft.Botframework.Xamarin.iOS.Effects;
 using Microsoft.Botframework.Xamarin.iOS.Renderers;
 using UIKit;
@@ -38,7 +39,7 @@ namespace Microsoft.Botframework.Xamarin.iOS.Effects
                     }
                 }
 
-                MessagingCenter.Subscribe<AdaptiveCardLayoutRendereriOS>(this, "ReloadUITableViewData", (sender) => {
+                MessagingCenter.Subscribe<AdaptiveViewCell>(this, "ReloadUITableViewData", (sender) => {
                     if (_tableView != null)
                     {
                         _tableView.ReloadData();
@@ -55,7 +56,7 @@ namespace Microsoft.Botframework.Xamarin.iOS.Effects
                 _observableCollection.CollectionChanged -= CollectionChanged;
             }
 
-            MessagingCenter.Unsubscribe<AdaptiveCardLayoutRendereriOS>(this, "ReloadUITableViewData");
+            MessagingCenter.Unsubscribe<AdaptiveViewCell>(this, "ReloadUITableViewData");
         }
 
         private void CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)

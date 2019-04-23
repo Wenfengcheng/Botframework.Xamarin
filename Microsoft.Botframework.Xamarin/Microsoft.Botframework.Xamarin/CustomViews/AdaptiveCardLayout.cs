@@ -8,8 +8,6 @@ namespace Microsoft.Botframework.Xamarin.CustomViews
 {
     public class AdaptiveCardLayout : StackLayout
     {
-        public event EventHandler OnAction;
-
         public void InvokeOnAction(object sender, ActionEventArgs args)
         {
             Device.BeginInvokeOnMainThread(() =>

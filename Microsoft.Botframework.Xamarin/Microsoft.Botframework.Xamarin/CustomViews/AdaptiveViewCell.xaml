@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+          xmlns:customViews="clr-namespace:Microsoft.Botframework.Xamarin.CustomViews"
+          x:Class="Microsoft.Botframework.Xamarin.CustomViews.AdaptiveViewCell">
+    <Frame HasShadow="True" 
+                           VerticalOptions="FillAndExpand" 
+                           HorizontalOptions="FillAndExpand" 
+                           Margin="5"
+                           Padding="0"
+                           BackgroundColor="White"
+                           CornerRadius="15">
+        <StackLayout x:Name="content"/>
+    </Frame>
+</ViewCell>
